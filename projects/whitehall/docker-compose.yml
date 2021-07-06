@@ -39,6 +39,8 @@ services:
       - nginx-proxy
       - asset-manager-app
       - publishing-api-app
+      - search-api-app
+      - content-store-app
     environment:
       DATABASE_URL: "mysql2://root:root@mysql-5.5/whitehall_development"
       REDIS_URL: redis://redis
