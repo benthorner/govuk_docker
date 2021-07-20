@@ -20,6 +20,12 @@ services:
   govuk_publishing_components-lite:
     <<: *govuk_publishing_components
 
+  govuk_publishing_components-jasmine:
+    <<: *govuk_publishing_components
+    ports:
+      - "8888:8888"
+    command: bundle exec rake app:jasmine
+
   govuk_publishing_components-app:
     <<: *govuk_publishing_components
     depends_on:
